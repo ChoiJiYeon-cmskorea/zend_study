@@ -1,4 +1,5 @@
 <?php
+//require_once __DIR__ . '/../models/DbTable/Product.php';
 class IndexController extends Zend_Controller_Action {
 
     /* (non-PHPdoc)
@@ -8,7 +9,8 @@ class IndexController extends Zend_Controller_Action {
     }
 
     public function indexAction() {
-        Zend_Debug::dump('test');
+        $product = new Application_Model_DbTable_Product();
+        $this->view->entries = $product->fetchAll(); 
     }
 
 }

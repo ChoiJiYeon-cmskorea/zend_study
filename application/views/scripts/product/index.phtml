@@ -1,0 +1,15 @@
+<p><a href="<?php echo $this->url(
+    array(
+        'controller' => 'product',
+        'action'     => 'sign'
+    ),
+    'default',
+    true) ?>">Product</a></p>
+ 
+Product: <br />
+<dl>
+    <?php foreach ($this->entries as $entry): ?>
+    <dt><?php echo $this->escape($entry->name) ?></dt>
+    <dd><?php echo $this->escape($entry->price) ?></dd>
+    <?php endforeach ?>
+</dl>

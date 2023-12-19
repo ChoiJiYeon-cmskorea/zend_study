@@ -1,4 +1,4 @@
-<style>
+<!--<style>
     a:link,
     a:visited
     {
@@ -40,4 +40,12 @@
             <a href="http://framework.zend.com/manual/en/">Zend Framework Manual</a>
         </p>
     </div>
-</div>
+</div>-->
+
+Product: <br />
+<dl>
+    <?php foreach ($this->entries as $entry): ?>
+    <dt><?php echo $this->escape($entry->name) ?></dt>
+    <dd><?php echo $this->escape($entry->price) ?></dd>
+    <?php endforeach ?>
+</dl>
