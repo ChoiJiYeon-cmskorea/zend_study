@@ -47,10 +47,10 @@ class Application_Model_ProductMapper
             return;
         }
         $row = $result->current();
-        $product->setInd($row->ind)
-        ->setName($row->name)
-        ->setPrice($row->price)
-        ->setTime($row->time);
+        $product->setInd($row->ind);
+        $product->setName($row->name);
+        $product->setPrice($row->price);
+        $product->setTime($row->time);
     }
     
     public function fetchAll()
@@ -59,10 +59,10 @@ class Application_Model_ProductMapper
         $entries   = array();
         foreach ($resultSet as $row) {
             $entry = new Application_Model_Product();
-            $entry->setInd($row->ind)
-            ->setName($row->name)
-            ->setPrice($row->price)
-            ->setTime($row->time);
+            $entry->setInd($row->ind);
+            $entry->setName($row->name);
+            $entry->setPrice($row->price);
+            $entry->setTime($row->time);
             $entries[] = $entry;
         }
         return $entries;

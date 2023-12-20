@@ -12,4 +12,12 @@ class Application_Model_DbTable_Product extends Zend_Db_Table_Abstract
         }
         return $row->toArray();
     }
+    public function addProduct($name, $price)
+    {
+        $data = array(
+                'name' => $name,
+                'price' => $price,
+        );
+        $this->insert($data);
+    }
 }

@@ -12,7 +12,7 @@ defined('APPLICATION_PRODUCT')
  * 운영 환경
  * APPLICATION_ENV
  */
-defined('APPLICATION_ENV')
+ defined('APPLICATION_ENV')
 || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
 
 // Define path to application directory
